@@ -24,6 +24,7 @@ where
 
 My reimplementation is not exactly the same as above.
 The difference lies in that the covariance matrix is not `full`, but `diag`, `spherical`, or `tied diag` (refer to [scikit-learn doc on "covariance\_type"](https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html) about the terms), in order to further reduce degree of freedom to better suit high dimension small sample scenario.
+In addition, the $T_k$ has been set to identity matrices, suggested in the paper.
 Such difference lead to slightly different M-step of the covariance matrix.
 Since in all three cases the covariance matrix is diagonal, it's denoted as $\boldsymbol\Sigma = \text{diag}(\sigma_1,\dots,\sigma_n)$, where $\sigma_i$ is the $i$th variance.
 
