@@ -1,0 +1,14 @@
+# compiled Cython files
+_*.c
+_*.cpp
+*.so
+build/
+
+# temporary files
+*.swp
+.DS_Store
+
+# virtualenv
+rt/
+venv/
+env/
